@@ -63,12 +63,24 @@ function setComputerChoice(){
 
 
 function style_message(){
-    document.getElementById("vs").style.display = "none";
-    document.getElementById("result-message").style.padding = "5px 15px 5px 15px";
-    document.getElementById("result-message").style.background = "#4C9654";
-    document.getElementById("result-message").style.borderRadius = "10px";
-    document.getElementById("result-message").style.transform = "rotate(-28.87deg)";
-    document.getElementById("result-message").style.fontSize = "38px";
+    let media_query = window.matchMedia("(max-width: 750px)")
+    if(media_query){
+        document.getElementById("vs").style.display = "none";
+        document.getElementById("result-message").style.padding = "5px 15px 5px 15px";
+        document.getElementById("result-message").style.background = "#4C9654";
+        document.getElementById("result-message").style.borderRadius = "10px";
+        document.getElementById("result-message").style.transform = "rotate(-28.87deg)";
+        document.getElementById("result-message").style.fontSize = "20px";  
+        document.getElementById("result-message").style.textAlign = "center";
+    }else{
+        document.getElementById("vs").style.display = "none";
+        document.getElementById("result-message").style.padding = "5px 15px 5px 15px";
+        document.getElementById("result-message").style.background = "#4C9654";
+        document.getElementById("result-message").style.borderRadius = "10px";
+        document.getElementById("result-message").style.transform = "rotate(-28.87deg)";
+        document.getElementById("result-message").style.fontSize = "38px";  
+    }
+    
 }
 
 function matchChoice(playerChoice,computerChoice){
